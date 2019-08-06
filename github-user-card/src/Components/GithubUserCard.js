@@ -20,4 +20,6 @@ class GithubUserCard extends Component {
       </div>
     );
   }
-}
+}  
+
+export default GithubUserCard;

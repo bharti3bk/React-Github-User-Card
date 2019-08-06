@@ -9,7 +9,7 @@ class GithubUserData extends Component{
         this.state = 
         {
             userdata : "",
-            followersdata : [""]
+            followersdata : []
         }
     }  
    
@@ -23,7 +23,7 @@ class GithubUserData extends Component{
          console.log(error);
      })  
 
-     const followerResults = axios.get(`https://api.github.com/users/follower`)
+     const followerResults = axios.get(`https://api.github.com/users/alasalle/followers`)
      followerResults.then(response => {
          this.setState({followersdata : response.data})
          console.log(response.data)
@@ -37,9 +37,8 @@ class GithubUserData extends Component{
      return(
          <div>
           <GithubUserCard user = {this.state.userdata}/> 
-           {this.state.followersdata.map(follower => {
-             return <GithubUserFollowers follower = {follower} />
-          })}
+           {this.state.followersdata.map(follower => 
+           <GithubUserFollowers follower={follower} />)}
           
          </div>
      )

@@ -35,7 +35,7 @@ class GithubUserData extends Component{
 
  render(){
      return(
-         <div>
+         <div className = "ui four cards">
           <GithubUserCard user = {this.state.userdata}/> 
            {this.state.followersdata.map(follower => 
            <GithubUserFollowers follower={follower} />)}

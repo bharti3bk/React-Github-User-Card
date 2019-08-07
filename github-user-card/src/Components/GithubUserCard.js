@@ -7,12 +7,12 @@ class GithubUserCard extends Component {
 
   render() {
     return (
-      <div class="ui card">
+      <div class="ui card" >
         <div class="image">
           <img src={this.props.user.avatar_url} alt = "UserImg" />
         </div>
         <div class="content">
-          <a class="header">{this.props.user.login}</a>
+          <a class="header" id = "headercard">{this.props.user.login}</a>
           <div class="description">
            {this.props.user.bio}
           </div>
